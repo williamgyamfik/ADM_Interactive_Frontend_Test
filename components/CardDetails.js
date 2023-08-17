@@ -18,7 +18,7 @@ const CardDetails = ({ postDetail }) => {
   }, [postDetail?.boxes]);
 
   return (
-    <div className="p-5 sm:w-[1036px] flex-grow rounded-[20px] bg-gradient-to-br from-[#2D303800] to-[#2D3038]">
+    <div className="p-5 sm:w-[1036px] flex-grow rounded-[20px] bg-gradient-to-br from-[#2D3038] to-[#2D303800]">
       <h4 className=" text-white font-normal text-[28px] sm:text-[64px] sm:leading-[74px] leading-[38px]">
         {postDetail?.name ?? ""}
       </h4>
