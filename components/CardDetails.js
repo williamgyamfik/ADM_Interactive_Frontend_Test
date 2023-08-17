@@ -37,7 +37,7 @@ const CardDetails = ({ postDetail }) => {
         />
       </div>
 
-      <p className="text-[#979797]  font-normal md:text-left text-center  sm:text-[34px] text-[18px] sm:leading-[44px]  leading-[20px] ">
+      <p className="text-[#979797]  font-normal sm:text-left text-center  sm:text-[34px] text-[18px] sm:leading-[44px]  leading-[20px] ">
         Number of required cargo bays
       </p>
       <p className="sm:w-[32px] text-center mt-5 sm:text-[56px] sm:leading-[66px]  text-white font-normal text-[34px] leading-[44px]">
