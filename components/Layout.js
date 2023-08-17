@@ -36,14 +36,14 @@ const Layout = (props) => {
       ) : (
         <div className="h-screen flex flex-col p-5 ">
           <NavBar />
-          <div className="flex flex-row ">
+          <div className="flex flex-row flex-1">
             <div className="w-64 hidden sm:flex ">
               <PostList searchTerm={searchTerm} />
             </div>
 
             <div
               id="drawer-example"
-              className="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-[#1b1d22]"
+              className="fixed w-full top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-[#1b1d22]"
               tabIndex="-1"
               aria-labelledby="drawer-label"
             >
@@ -54,7 +54,7 @@ const Layout = (props) => {
                 className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
               >
                 <svg
-                  className="w-3 h-3"
+                  className="w-10 h-10 text-white"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

@@ -4,7 +4,7 @@ import { context } from "@/store/context";
 import { useContext } from "react";
 import CardDetails from "@/components/CardDetails";
 
-const Index = (props) => {
+const Index = () => {
   const router = useRouter();
   const { post } = useContext(context);
   const routerId = router.query.id;
@@ -13,7 +13,7 @@ const Index = (props) => {
 
   return (
     <>
-      <div className=" space-y-7 flex flex-col flex-grow">
+      <div className=" space-y-7 flex flex-col flex-grow mt-6">
         <CardDetails postDetail={postDetail} />
       </div>
     </>
