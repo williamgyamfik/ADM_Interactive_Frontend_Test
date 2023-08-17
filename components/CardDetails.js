@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const CardDetails = ({ postDetail }) => {
+  const [num, setNum] = useState(null);
+
+  useEffect(() => {
+    const totalCargoNumber = () => {
+      const sumValues = postDetail.boxes
+        .split(",")
+        .reduce((a, b) => Number(b) + a, 0);
+      const totalValue = Math.ceil(sumValues / 10);
+      setNum(totalValue);
+    };
+    totalCargoNumber();
+  }, [postDetail.boxes]);
+
   return (
     <div className="p-5 sm:w-[1036px] flex-grow rounded-[20px] bg-gradient-to-br from-[#2D303800] to-[#2D3038]">
       <h4 className=" text-white font-normal text-[28px] sm:text-[64px] sm:leading-[74px] leading-[38px]">
@@ -15,7 +28,7 @@ const CardDetails = ({ postDetail }) => {
 
       <div className="mb-10 rounded-lg  bg-white sm:w-[320px] ">
         <input
-          defaultValue={postDetail.boxes}
+          value={postDetail.boxes}
           className="p-2 rounded-lg sm:w-[320px] "
         />
       </div>
@@ -24,7 +37,7 @@ const CardDetails = ({ postDetail }) => {
         Number of required cargo bays
       </p>
       <p className="sm:w-[32px] text-center mt-5 sm:text-[56px] sm:leading-[66px]  text-white font-normal text-[34px] leading-[44px]">
-        5
+        {num}
       </p>
     </div>
   );

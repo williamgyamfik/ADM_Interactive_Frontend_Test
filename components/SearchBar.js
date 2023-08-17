@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 
 const SearchBar = (props) => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const { searchTerm, searchTermHandler } = props;
 
   const searchHandler = (e) => {
-    setSearchTerm(e.target.value);
+    const value = e.target.value;
+    searchTermHandler(value);
   };
-  console.log(searchTerm);
+
   return (
     <form className="">
       <label

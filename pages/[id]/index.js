@@ -10,19 +10,13 @@ const Index = (props) => {
   const { post } = useContext(context);
   const routerId = router.query.id;
 
-  const [searchTerm, setSearchTerm] = useState("");
-
   const postDetail = post.find((post) => post.id === routerId);
-
-  // const searchValuehandler = (value) => {
-  //   setSearchTerm(value);
-  // };
 
   return (
     <>
       <div className=" space-y-7 flex flex-col flex-grow">
         {/* <SearchBar /> */}
-        <CardDetails />
+        <CardDetails postDetail={postDetail} />
       </div>
     </>
   );

@@ -12,6 +12,8 @@ const Layout = (props) => {
 
   const [loading, setLoading] = useState(false);
 
+  const [searchTerm, setSearchTerm] = useState("");
+
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
@@ -25,6 +27,8 @@ const Layout = (props) => {
     fetchData();
   }, [setPost]);
 
+  const searchTermHandler = (value) => setSearchTerm(value);
+
   return (
     <>
       {loading ? (
@@ -34,9 +38,8 @@ const Layout = (props) => {
           <NavBar />
           <div className="flex flex-row ">
             <div className="w-64 hidden sm:flex ">
-              <PostList />
+              <PostList searchTerm={searchTerm} />
             </div>
-            <SearchBar />
 
             <div
               id="drawer-example"
@@ -68,10 +71,14 @@ const Layout = (props) => {
                 <span className="sr-only">Close menu</span>
               </button>
 
-              <PostList />
+              <PostList searchTerm={searchTermHandler} />
             </div>
 
             <div className="flex flex-col flex-grow p-5 w-full">
+              <SearchBar
+                searchTerm={searchTerm}
+                searchTermHandler={searchTermHandler}
+              />
               {props.children}
             </div>
           </div>
