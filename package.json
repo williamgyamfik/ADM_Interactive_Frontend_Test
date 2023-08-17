@@ -9,13 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "autoprefixer": "10.4.15",
+    "autoprefixer": "^10.4.15",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.15",
+    "flowbite": "^1.8.1",
+    "flowbite-react": "^0.5.0",
     "next": "13.4.15",
-    "postcss": "8.4.27",
+    "postcss": "^8.4.27",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwindcss": "3.3.3"
+    "react-icons": "^4.10.1",
+    "roboto-font": "^0.1.0",
+    "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {
+    "lato-font": "^3.0.0"
   }
 }
